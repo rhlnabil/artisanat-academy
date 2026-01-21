@@ -1,0 +1,293 @@
+    /* ====== GLOBAL ====== */
+.section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+p {
+    max-width: 700px;
+    margin: auto;
+    color: #555;
+}
+
+/* ====== HERO ====== */
+/* ====== HERO SECTION ====== */
+.hero {
+    height: 90vh;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url('../images/hero.png');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+    color: #fff;
+}
+
+
+.hero-content {
+    max-width: 600px;
+    animation: fadeUp .8s ease;
+}
+
+.hero-content h1 {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: #eee;
+}
+
+
+/* ====== COURSES ====== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.1);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* ====== RESERVATION ====== */
+.reservation {
+    background: #f7efe5;
+}
+
+/* ====== INSCRIPTION ====== */
+.inscription {
+    background: #fff3e0;
+}
+
+.btn-secondary {
+    padding: 14px 30px;
+    background: #333;
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+/* ====== CONTACT ====== */
+.contact form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.contact button {
+    background: #b45f06;
+    color: #fff;
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+}
+/* ================= HEADER ================= */
+
+.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #fff;
+    padding: 18px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 6px 20px rgba(0,0,0,.08);
+}
+
+.logo h2 {
+    color: var(--primary);
+}
+
+.nav-links,
+.nav-auth {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a,
+.btn-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.nav-links a:hover,
+.btn-link:hover {
+    color: var(--primary);
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: #000;
+    padding: 10px 22px;
+    border-radius: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .nav-links {
+        display: none;
+    }
+}
+/* ================= COURSES GRID ================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+    animation: fadeIn .6s ease;
+}
+
+/* ================= COURSE CARD ================= */
+
+.cards .card {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 14px 30px rgba(0,0,0,.08);
+    display: flex;
+    flex-direction: column;
+    animation: fadeUp .6s ease;
+    position: relative;
+}
+
+/* hover effect */
+.cards .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 22px 40px rgba(0,0,0,.15);
+}
+
+/* ================= IMAGE ================= */
+
+.course-img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    transition: transform .4s ease;
+}
+
+.cards .card:hover .course-img {
+    transform: scale(1.08);
+}
+
+/* ================= CARD CONTENT ================= */
+
+.cards .card h3 {
+    font-size: 20px;
+    color: var(--primary);
+    margin: 18px 18px 8px;
+}
+
+.cards .card p {
+    font-size: 14px;
+    color: #555;
+    margin: 6px 18px;
+    line-height: 1.6;
+}
+
+/* description clamp */
+.cards .card p:first-of-type {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* icons text */
+.cards .card p strong {
+    color: #333;
+}
+
+/* ================= ACTION BUTTON ================= */
+
+.cards .card .btn {
+    margin: 18px;
+    margin-top: auto;
+    text-align: center;
+    background: var(--primary);
+    color: #000;
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 8px 18px rgba(0,0,0,.15);
+}
+
+.cards .card .btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(0,0,0,.22);
+}
+
+.cards .card .btn:active {
+    transform: scale(.97);
+}
+
+/* ================= BADGE (OPTIONAL) ================= */
+/* إذا بغيت badge ديال catégorie */
+
+.cards .card::after {
+    content: "Cours";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(0,0,0,.7);
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 480px) {
+
+    .course-img {
+        height: 160px;
+    }
+
+    .cards .card h3 {
+        font-size: 18px;
+    }
+}

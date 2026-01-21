@@ -1,0 +1,10 @@
+# Fichiers sensibles
+.env
+config/database.php
+
+# Cache / IDE
+.idea/
+.vscode/
+
+# Logs
+*.log
